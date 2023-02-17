@@ -1,0 +1,54 @@
+<style>
+    h1{
+        font-family:Roboto;
+    }
+</style>
+<body style="background-image: url('images/pexels-romka- -2034373.jpg');background-repeat: no-repeat !important;
+background-size: cover;">
+    <div class="mdl-grid">
+
+        <div class="mdl-cell mdl-cell--6-col" style="display: flex;">
+            <div style="align-self: center;margin-left: 2%;">
+                <h1 class="text-color-gradient" >Join us. <br>Let us take your business to the next level</h1>
+            </div>
+        </div>
+        <div class="mdl-card mdl-cell mdl-cell--4-col"
+            style="background-color: transparent;align-self: center;margin: auto;">
+            <form role="form" enctype="multipart/form-data" method="POST" action="/contact" class="form-signin"
+                style="padding: 10px;">
+                <div class="text-center mb-4">
+                    <img class="mb-4" src="images/wdbstudioicon.png" alt="" width="72" height="72">
+                    <h1 class="h1 mb-3 font-weight-normal">Request A Qoute Now!</h1>
+
+                </div>
+
+                <div class="form-label-group">
+                    <input type="text" name="inputName" id="inputName" class="form-control"
+                        placeholder="Company Name" required="true" autofocus="">
+                    <label for="inputName" style="opacity: 0;">Company Name</label>
+                </div>
+
+                <div class="form-label-group">
+                    <input type="email" name="inputEmail" id="inputEmail" class="form-control"
+                        placeholder="Email address" required="true" autofocus="">
+                    <label for="inputEmail" style="opacity: 0;">Email address</label>
+                </div>
+
+                <div class="form-label-group">
+                    <input type="tel" name="inputPhone" id="inputPhone" class="form-control" placeholder="Phone Number"
+                        required="true" autofocus="">
+                    <label for="inputPhone" style="opacity: 0;">Phone Number</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <textarea class="form-control" name="comments" id="comments" placeholder="Comments or Questions"
+                        rows="4"></textarea>
+                </div>
+
+                <button class="mdl-chip" type="submit"><span class="mdl-chip__text">Send Me a
+                        Quote</span></span></button>
+                <p class="mt-5 mb-3 text-muted text-center">© 2022-2023</p>
+            </form>
+        </div>
+    </div>
+</body>

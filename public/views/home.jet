@@ -1,0 +1,691 @@
+<style>
+    .animation {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        }
+
+        .sentence {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-size: 72px;
+        animation: change-sentence 10s infinite;
+        }
+
+        .sentence:before {
+        content: "e Do Branding";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-size: 72px;
+        animation: change-sentence 10s infinite;
+        }
+
+        .sentence:nth-of-type(1):before {
+        animation-delay: 3s;
+        }
+        .sentence:nth-of-type(2):before {
+        content: "esign Brands";
+        animation-delay: 6s;
+        }
+        .sentence:nth-of-type(3):before {
+        content: "evelop Brands";
+        animation-delay: 9s;
+        }
+
+        @keyframes change-sentence {
+        0% {
+            opacity: 0;
+        }
+        33.33% {
+            opacity: 1;
+        }
+        66.66% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+        }
+
+
+</style>
+    
+    <style>
+      body {
+        font-family: "Roboto" !important;
+        font-weight: 400;
+        color: white;
+        overflow: hidden;
+      }
+      .row.promo-content {
+        background: #fff none repeat scroll 0 0;
+        -webkit-box-shadow: 0 9px 9px 0 #c7c7c7;
+        box-shadow: 0 9px 9px 0 #c7c7c7;
+        margin-top: 10px;
+        padding-top: 30px;
+        position: relative;
+        z-index: 1;
+      }
+      .quote {
+        margin: 36px;
+        font-size: 48px;
+        text-align: center;
+        line-height: 48px;
+      }
+      .subscriber-form {
+        background: #fff none repeat scroll 0 0;
+        border: 1px solid #ddd;
+        border-radius: 50px;
+        font-size: 18px;
+        height: 50px;
+        position: relative;
+        text-transform: capitalize;
+      }
+      .fa {
+        font-size: 48px;
+      }
+      .inverted{
+        background-color: #131516!important;
+      }
+      ::-webkit-scrollbar {
+        width: 3px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #329163;
+      }
+      .hoverable {
+        transition: box-shadow 0.25s;
+        box-shadow: 0;
+        margin: 4px;
+      }
+
+      .hoverable:hover {
+        transition: box-shadow 0.25s;
+        box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+      .hoverable:active {
+        transition: box-shadow 0.15s;
+        box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.2),
+          0 3px 10px 0 rgba(0, 0, 0, 0.19);
+      }
+      .transparent {
+        background-color: rgba(0, 128, 128, 0.1);
+        transition: box-shadow 0.25s;
+        box-shadow: 0;
+      }
+
+      .transparent:hover {
+        background-color: rgba(0, 128, 128, 1);
+        transition: box-shadow 0.25s;
+        box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        justify-content: flex-start;
+      }
+      .mdl-layout__header .mdl-layout__drawer-button {
+        display: none !important;
+      }
+      .mdl-layout__drawer-button {
+        display: none;
+      }
+      .mdl-navigation__link:active {
+        color:#00E1B7;
+      }
+      .mdl-navigation__link:hover {
+        color:#00E1B7;
+      }
+      .activelink {
+        color:#00E1B7 !important;
+      }
+      .mdl-chip{
+        /*background-color:#00E1B7;*/
+      }
+      
+      @media screen and (max-width: 1024px) {
+        .mdl-layout__drawer-button {
+          display: block;
+        }
+        .mdl-layout__header .mdl-layout__drawer-button {
+          display: block !important;
+        }
+        .mdl-layout__drawer {
+          display: block !important;
+        }
+        .mdl-layout {
+          height: 100% !important;
+        }
+        .wdbcon{
+          margin-top:30% !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="mdl-layout mdl-js-layout mdl-layout--fixed-header"
+      style="height: max-content"
+    >
+      <header id="header" class="header mdl-layout__header mdl-layout__header--transparent">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span
+            class="mdl-layout-title"
+            style="font-weight: bold; text-shadow: 3px 2px 8px #072014"
+            ><b class="wcolor">W</b><b class="dcolor">D</b><b class="bcolor">B</b> Studio
+          </span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation. We hide it in small screens. -->
+          <nav class="mdl-navigation mdl-layout--large-screen-only">
+            <a
+              class="mdl-navigation__link activelink"
+              id="homelink" onclick="activateLink(this)"
+              href=""
+              tabindex="0"
+              >Home
+            </a>
+            <a class="mdl-navigation__link" onclick="activateLink(this)" id="featureslink" href="/services"
+              >Services
+            </a>
+            <a class="mdl-navigation__link" onclick="activateLink(this)" id="faqslink" href="/about">About Us</a>
+            <a class="mdl-navigation__link" id="contactlink" onclick="activateLink(this)" href="/contact">
+              <button type="button" class="mdl-chip">
+                <span class="mdl-chip__text">Get a Proposal</span>
+            </button>
+            </a>
+          </nav>
+        </div>
+      </header>
+      <div
+        class="mdl-layout__drawer"
+        style="display: none; background-color: #131516;border:0px"
+      >
+        <nav class="mdl-navigation">
+          <a
+              class="mdl-navigation__link activelink"
+              id="homelink" onclick="activateLink(this)"
+              href=""
+              tabindex="0"
+              >Home
+            </a>
+            <a class="mdl-navigation__link" onclick="activateLink(this)" id="featureslink" href="/services"
+              >Services
+            </a>
+            <a class="mdl-navigation__link" onclick="activateLink(this)" id="faqslink" href="/about">About Us</a>
+            <a class="mdl-navigation__link" id="contactlink" onclick="activateLink(this)" href="/contact">
+              <button type="button" class="mdl-chip">
+                <span class="mdl-chip__text">Get a Proposal</span>
+            </button>
+            </a>
+        </nav>
+      </div>
+    </div>
+    <main
+      id="main"
+      class="main mdl-layout__content"
+      style="height: 100vh !important; width: 100%"
+    >
+    
+      <div
+        id="carouselExampleControls"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-pause="false"
+      >
+        <div
+          class="carousel-inner"
+          style="width: 100%; height: 100vh !important"
+        >
+          <div
+            class="carousel-item active"
+            style="
+              background-image: url('/images/alex-padurariu-thanks.jpg');
+              background-repeat: no-repeat !important;
+              background-size: cover;
+              height: 100vh !important;
+              background-position: center;
+              box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.66);
+            "
+          >
+            <div
+              class="container wdbcon"
+              style="
+                margin-top: 10%;
+                margin-left: 24px;
+                width: auto;
+                margin-right: 24px;
+              "
+            >
+              <div class="row flex-v-center">
+                <div
+                  class="col-md-8 col-lg-7 col-sm-12 col-xs-12"
+                  style="margin: auto"
+                >
+                  <div class="welcome-text">
+                    <h1
+                      class="animate__animated animate__fadeInUp animate__delay-1s"
+                    >
+                      <b class="wcolor">W</b>e <b class="dcolor">D</b>efine <b class="bcolor">B</b>rands
+                    </h1>
+                    <p
+                      class="animate__animated animate__fadeInUp animate__delay-2s" style="line-height:2;letter-spacing:1px"
+                    >
+                      We will create a unique identity for your product or service that resonates
+                      with your target audience and sets it apart from your competitors. 
+                      We work with you closely to create a brand strategy specifically 
+                      tailored to your goals as a company.
+                      
+                    </p>
+                    
+                    <div
+                      class="animate__animated animate__fadeInUp animate__delay-3s"
+                    >
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="carousel-item"
+            style="
+              background-image: url('/images/sufyan-thanks.jpg');
+              background-repeat: no-repeat !important;
+              background-size: cover;
+              height: 100vh !important;
+              background-position: center;
+              box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.66);
+            "
+          >
+            <div
+              class="container wdbcon"
+              style="
+                margin-top: 10%;
+                margin-left: 24px;
+                width: auto;
+                margin-right: 24px;
+              "
+            >
+              <div class="row flex-v-center">
+                <div
+                  class="col-md-8 col-lg-7 col-sm-12 col-xs-12"
+                  style="margin: auto"
+                >
+                  <div class="welcome-text">
+                    <h1
+                      class="animate__animated animate__fadeInUp animate__delay-1s"
+                    >
+                      <b class="wcolor">W</b>e <b class="dcolor">D</b>evelop <b class="bcolor">B</b>rands
+                    </h1>
+                    <p
+                      class="animate__animated animate__fadeInUp animate__delay-2s" style="line-height:2;letter-spacing:1px"
+                    >
+                       Developing a brand involves taking the brand definition and bringing it to life 
+                       through various marketing efforts, campaigns and initiatives. This includes 
+                       creating a website and social media presence, developing and 
+                       executing marketing campaigns, building brand awareness and creating brand loyalty. 
+                       WDB will be with you through this whole process.
+                    </p>
+                    <div
+                      class="animate__animated animate__fadeInUp animate__delay-3s"
+                    >
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="carousel-item"
+            style="
+              background-image: url('/images/shubham-dhage-thanks.jpg');
+              background-repeat: no-repeat !important;
+              background-size: cover;
+              height: 100vh !important;
+              background-position: center;
+              box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.66);
+            "
+          >
+            <div
+              class="container wdbcon"
+              style="
+                margin-top: 10%;
+                margin-left: 24px;
+                width: auto;
+                margin-right: 24px;
+              "
+            >
+              <div class="row flex-v-center">
+                <div
+                  class="col-md-8 col-lg-7 col-sm-12 col-xs-12"
+                  style="margin: auto"
+                >
+                  <div class="welcome-text">
+                    <h1
+                      class="animate__animated animate__fadeInUp animate__delay-1s"
+                    >
+                      <b class="wcolor">W</b>e <b class="dcolor">D</b>esign <b class="bcolor">B</b>rands
+                    </h1>
+                    <p 
+                      class="animate__animated animate__fadeInUp animate__delay-2s" style="line-height:2;letter-spacing:1px"
+                    >
+                      We will create the visual identity and all the elements that make up the look and feel of your brand. 
+                      This includes the logo, typography, color palette, imagery, and other visual elements. 
+                      It's important that the design of your brand reflects the brand's personality, and communicates the brand's values to your target audience.
+                    </p>
+                    <div
+                      class="animate__animated animate__fadeInUp animate__delay-3s"
+                    >
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev" style="opacity:0"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next" style="opacity:0"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!--Connect you to your target audience build connections that are data driven-->
+      <section style="height:fit-content;background-color:#131516">
+        <div class="mdl-grid">
+          
+          <div class="mdl-cell mdl-cell--6-col" style="height:100%;background-image: url('/images/circlebrush.png');
+              background-repeat: no-repeat !important;
+              background-size: cover;
+              height: 100vh !important;
+              background-position: center;
+              display:grid">
+                  <h1 class="hoverable-text" style="color:#4c4c4c;font-family:Permanent Marker!important;justify-self:center;align-self:center;text-shadow: -2px 3px 4px black;">
+                      CREATIVE <br>DESIGNS
+                  </h1>
+          </div>
+          <div class="mdl-cell mdl-cell--6-col">
+            <h4 class="text-color-gradient">Creating Brands That Stand Out</h4>
+            <h1 style="font-family:Quicksand;">
+              Unparalleled Creativity 
+            </h1>
+            <p style="line-height:2;letter-spacing:1px">
+            We use innovative techniques, out-of-the-box thinking, 
+            and a deep understanding of consumer behavior and market trends to
+            develop unique brands and effective ways to promote them. All 
+            while working closely with you to create a brand that you and your 
+            target audience love.
+            </p>
+                    <div class="mdl-grid" style="color:#ffffff;padding:0px">
+                      <div class="mdl-cell mdl-cell--6-col" style="padding:0px;margin:0px">
+                        <div class="">
+                          <div class="" style="padding:0px;margin:0px">
+                            <h3 class="">Brand Identity</h3>
+                          </div>
+                          <div class="" style="padding:3px;margin:0px;letter-spacing:1px;line-height:2;">
+                            The creation of visual elements such as a logo, color scheme, and typography,
+                             as well as the development of a brand voice and messaging.
+                          </div>
+                          <div class="mdl-card__actions">
+                            <a href="#">
+                              <button type="button" class="mdl-chip hoverable">
+                                  <span class="mdl-chip__text">Learn More</span>
+                              </button>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mdl-cell mdl-cell--6-col" style="padding:0px;margin:0px">
+                        <div class="">
+                          <div class="" style="padding:0px;margin:0px">
+                            <h3 class="" >Brand Strategy</h3>
+                          </div>
+                          <div class="" style="padding:3px;margin:0px;letter-spacing:1px;line-height:2;">
+                            This is how the brand will be communicated and promoted, and what channels will be used to reach the target audience
+                          </div>
+                          <div class="mdl-card__actions">
+                            <a href="#">
+                              <button type="button" class="mdl-chip hoverable">
+                                  <span class="mdl-chip__text">Learn More</span>
+                              </button>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+          </div>
+        </div>
+        
+      </section>
+      
+      <!--Let us bring your brand to life-->
+      <section style="height:100vh;background-color:#0d0d0d">
+        <div class="mdl-grid" style="padding:0px;">
+          
+          <div class="mdl-cell mdl-cell--6-col" style="">
+            <h4 class="text-color-gradient">Bringing Your Brand To Life</h4>
+            <h1 style="font-family:Quicksand;">
+              Exceptional Processes
+            </h1>
+            Developing a brand involves taking the brand definition and bringing it to life 
+                       through various marketing efforts, campaigns and initiatives. This includes 
+                       creating a website and social media presence, developing and 
+                       executing marketing campaigns, building brand awareness and creating brand loyalty. 
+                       WDB will be with you through this whole process.
+            <p style="line-height:2;letter-spacing:1px">
+            We are ready to create great websites or apps that match your brand and
+            through various marketing campaigns and initiatives ,make your brand known to the
+            right audience. 
+            </p>
+                    <div class="mdl-grid" style="color:#ffffff;padding:0px">
+                      <div class="mdl-cell mdl-cell--6-col" style="padding:0px;margin:0px">
+                        <div class="">
+                          <div class="" style="padding:0px;margin:0px">
+                            <h3 class="">Website&App Development</h3>
+                          </div>
+                          <div class="" style="padding:3px;margin:0px;letter-spacing:1px;line-height:2;">
+                            All the visual elements such as a logo, color scheme, and typography,will be
+                            used to create a website that matches you and the audience you'd like to reach.
+                          </div>
+                          <div class="mdl-card__actions">
+                            <a href="#">
+                              <button type="button" class="mdl-chip hoverable">
+                                  <span class="mdl-chip__text">Learn More</span>
+                              </button>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mdl-cell mdl-cell--6-col" style="padding:0px;margin:0px">
+                        <div class="">
+                          <div class="" style="padding:0px;margin:0px">
+                            <h3 class="" >Print Work</h3>
+                          </div>
+                          <div class="" style="padding:3px;margin:0px;letter-spacing:1px;line-height:2;">
+                            Our services may also include any print works you might require with your logo.
+                            Merch such as shirts,hoodies etc or even business cards and notebooks.
+                          </div>
+                          <div class="mdl-card__actions">
+                            <a href="#">
+                              <button type="button" class="mdl-chip hoverable">
+                                  <span class="mdl-chip__text">Learn More</span>
+                              </button>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+          
+          </div>
+          <div class="mdl-cell mdl-cell--6-col" style="padding-top:0px;margin-right:0px;margin-top:0px;height:100%;background-image: url('/images/bg-video.gif');
+              background-repeat: no-repeat !important;
+              background-size: cover;
+              height: 100vh !important;
+              background-position: center;
+              display:grid">
+              <h1 class="heartbeat" style="color:#FFFFFF80;font-family:Permanent Marker!important;justify-self:center;align-self:center;text-shadow: -2px 3px 7px black;">
+                  DYNAMIC <br>BRANDS
+              </h1>
+          </div>
+        </div>
+        
+      </section>
+      <!--Connect you to your target audience build connections that are data driven-->
+      <section style="height:100vh;background-color:#131516">
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--6-col" style="height:100%;background-image: url('/images/techmesh.png');
+              background-repeat: no-repeat !important;
+              background-size: cover;
+              height: 100vh !important;
+              background-position: center;">
+          </div>
+          <div class="mdl-cell mdl-cell--6-col">
+            <h4 class="text-color-gradient">Creating Brands That Stand Out</h4>
+            <h1 style="font-family:Quicksand;">
+              Data-Driven Marketing
+            </h1>
+            <p style="line-height:2;letter-spacing:1px">
+            We use analytics to monitor how every action we take affects your numbers. 
+            This way we know when we are making a positive impact in your business and 
+            where you should spend your money to push for more growth.
+            </p>
+                    <div class="mdl-grid" style="color:#ffffff;padding:0px">
+                      <div class="mdl-cell mdl-cell--6-col" style="padding:0px;margin:0px">
+                        <div class="">
+                          <div class="" style="padding:0px;margin:0px">
+                            <h3 class="">Analytics</h3>
+                          </div>
+                          <div class="" style="padding:3px;margin:0px;letter-spacing:1px;line-height:2;">
+                            The creation of visual elements such as a logo, color scheme, and typography,
+                             as well as the development of a brand voice and messaging.
+                          </div>
+                          <div class="mdl-card__actions">
+                            <a href="#">
+                              <button type="button" class="mdl-chip hoverable">
+                                  <span class="mdl-chip__text">Learn More</span>
+                              </button>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      
+                    </div>
+          
+          </div>
+          
+        </div>
+        
+      </section>
+      <!--Footer-->
+      <footer class="mdl-mega-footer">
+  <div class="mdl-mega-footer__middle-section">
+
+    <div class="mdl-mega-footer__drop-down-section">
+      <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+      <h1 class="mdl-mega-footer__heading">Features</h1>
+      <ul class="mdl-mega-footer__link-list">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Partners</a></li>
+        <li><a href="#">Updates</a></li>
+      </ul>
+    </div>
+
+    <div class="mdl-mega-footer__drop-down-section">
+      <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+      <h1 class="mdl-mega-footer__heading">Details</h1>
+      <ul class="mdl-mega-footer__link-list">
+        <li><a href="#">Specs</a></li>
+        <li><a href="#">Tools</a></li>
+        <li><a href="#">Resources</a></li>
+      </ul>
+    </div>
+
+    <div class="mdl-mega-footer__drop-down-section">
+      <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+      <h1 class="mdl-mega-footer__heading">Technology</h1>
+      <ul class="mdl-mega-footer__link-list">
+        <li><a href="#">How it works</a></li>
+        <li><a href="#">Patterns</a></li>
+        <li><a href="#">Usage</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Contracts</a></li>
+      </ul>
+    </div>
+
+    <div class="mdl-mega-footer__drop-down-section">
+      <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+      <h1 class="mdl-mega-footer__heading">FAQ</h1>
+      <ul class="mdl-mega-footer__link-list">
+        <li><a href="#">Questions</a></li>
+        <li><a href="#">Answers</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="mdl-mega-footer__bottom-section">
+    <div class="mdl-logo">WDB Studio</div>
+    <ul class="mdl-mega-footer__link-list">
+      <li><a href="#">Help</a></li>
+      <li><a href="#">Privacy & Terms</a></li>
+    </ul>
+  </div>
+
+</footer>
+    </main>
+  </body>
+  <script>
+    
+    var className = "inverted";
+    var scrollTrigger = 60;
+    var main = document.getElementById("main");
+    main.onscroll = function() {
+      if (main.scrollTop >= scrollTrigger) {
+        document.getElementById("header").classList.add(className);
+      } else {
+        document.getElementById("header").classList.remove(className);
+      }
+    };
+
+    var currentActiveLink = document.getElementById("homelink");
+    var featureslink = document.getElementById("featureslink");
+    
+
+
+    function activateLink(element){
+      currentActiveLink.classList.remove("activelink");
+      element.classList.add("activelink");
+      currentActiveLink = element;
+    }
+
+  </script>
+
+

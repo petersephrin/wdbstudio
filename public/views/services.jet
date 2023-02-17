@@ -1,0 +1,34 @@
+<style>
+    @media screen and (max-width: 1024px) {
+        .mdl-layout__header {
+            display: block;
+        }
+    }
+</style>
+
+<body>
+    <header id="header" class="header mdl-layout__header mdl-layout__header--transparent">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title" style="font-weight: bold; text-shadow: 3px 2px 8px #072014"><b
+                    class="wcolor">W</b><b class="dcolor">D</b><b class="bcolor">B</b> Studio
+            </span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation. We hide it in small screens. -->
+            <nav class="mdl-navigation ">
+
+                <a class="mdl-navigation__link" id="contactlink" onclick="activateLink(this)" href="/contact">
+                    <button type="button" class="mdl-chip">
+                        <span class="mdl-chip__text">Get a Proposal</span>
+                    </button>
+                </a>
+            </nav>
+        </div>
+    </header>
+    <!--Branding-->
+    <!--Marketing-->
+    <!--Website and App Development-->
+    <!--SEO-->
+
+</body>

@@ -269,6 +269,49 @@
         }
         }
 
+
+       .mdl-layout__header .mdl-layout__drawer-button {
+        display: none !important;
+      }
+      .mdl-layout__drawer-button {
+        display: none;
+      }
+      .mdl-navigation__link:active {
+        color:#00E1B7;
+      }
+      .mdl-navigation__link:hover {
+        color:#00E1B7;
+      }
+      .activelink {
+        color:#00E1B7 !important;
+      }
+      .mdl-chip{
+        /*background-color:#00E1B7;*/
+      }
+      
+      @media screen and (max-width: 1024px) {
+        .mdl-layout__drawer-button {
+          display: block;
+        }
+        .mdl-layout__header .mdl-layout__drawer-button {
+          display: block !important;
+        }
+        .mdl-layout__drawer {
+          display: block !important;
+        }
+        .mdl-layout {
+          height: 100% !important;
+        }
+        .wdbcon{
+          margin-top:30% !important;
+        }
+      }
+      @media screen and (max-width: 1024px){
+            .mdl-layout__header {
+                display: block!important;
+            }
+        }
+
     </style>
     </head>
     

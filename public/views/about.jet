@@ -1,3 +1,45 @@
-<body>
-    
+<body style="background-image: url('images/bess-hamiti.jpg')!important;">
+    <header id="header" class="header mdl-layout__header mdl-layout__header--transparent">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title" style="font-weight: bold; text-shadow: 3px 2px 8px #072014"><b
+                    class="wcolor">Ab</b><b class="dcolor">o</b><b class="bcolor">ut</b> Us
+            </span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation. We hide it in small screens. -->
+            <nav class="mdl-navigation ">
+
+                <a class="mdl-navigation__link" id="contactlink" onclick="activateLink(this)" href="/contact">
+                    <button type="button" class="mdl-chip">
+                        <span class="mdl-chip__text">Get a Proposal</span>
+                    </button>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container wdbcon" style="
+                margin-top: 10%;
+                width: auto;
+              ">
+        <div class="row flex-v-center">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" style="margin: auto">
+                <div class="welcome-text">
+                    <h3 class="animate__animated animate__fadeInUp animate__delay-1s" style="text-align: center;">
+                        At WDB, we believe that great brands are the result of purposeful, strategic thinking and
+                        thoughtful execution.
+                        We work with our clients to create brands that define their category, win customer loyalty and
+                        drive profitable growth.
+                    </h3>
+
+
+                    <div class="animate__animated animate__fadeInUp animate__delay-3s">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
